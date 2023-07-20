@@ -16,7 +16,7 @@ const viewRouter = require('./routes/viewRoutes');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 
-
+// Start Express App
 const app = express();
 
 
