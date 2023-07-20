@@ -53,7 +53,7 @@ export const signup = async (name, email, password, passwordConfirm) => {
         },
       });
   
-      if (res.data.status === 'success') {
+      if (res.data.status === 'Successfully created') {
         showAlert('success', 'Signed up successfully');
         window.setImmediate(() => {
           location.assign('/');
