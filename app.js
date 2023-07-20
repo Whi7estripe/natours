@@ -15,6 +15,7 @@ const bookingRouter = require('./routes/bookingRoutes');
 const viewRouter = require('./routes/viewRoutes');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 
 // Start Express App
 const app = express();
@@ -67,6 +68,8 @@ app.use(hpp({
         'difficulty'
     ]
 }));
+
+app.use(compression());
 
 // Test Middleware
 app.use((req, res, next) => {

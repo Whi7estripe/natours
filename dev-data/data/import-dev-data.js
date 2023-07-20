@@ -44,10 +44,10 @@ try {
     await Tour.deleteMany();
     await User.deleteMany();
     await Review.deleteMany();
-    console.log('Data deleted successfully');
+    // console.log('Data deleted successfully');
     process.exit();
     } catch (err) {
-        console.log(err);
+        // console.log(err);
     }
 }
 
@@ -57,4 +57,4 @@ if (process.argv[2] === '--import') {
     deleteData();
 }
 
-console.log(process.argv);
+// console.log(process.argv);
