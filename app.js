@@ -25,6 +25,8 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 // 1) Global Middlewares
+// Implement CORS
+app.use(cors());
 
 // Serving static files
 app.use(express.static(path.join(__dirname, 'public')));
@@ -79,12 +81,7 @@ app.use((req, res, next) => {
 });
 
 // 3) Routes
-app.use(
-    cors({
-      credentials: true,
-      origin: 'http://localhost:3000'
-    })
-); 
+
 
 
 app.use('/', viewRouter);
